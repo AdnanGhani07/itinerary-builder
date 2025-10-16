@@ -30,7 +30,7 @@ export const VisaDetailsInput: React.FC<VisaDetailsInputProps> = ({
 
   return (
     <div>
-      <h3 className="mb-2 font-bold">Visa Details Input</h3>
+      <h3 className="mb-2 font-bold">Visa Details</h3>
       <div className="flex gap-2 mb-2 items-center">
         <input
           className="border px-2"

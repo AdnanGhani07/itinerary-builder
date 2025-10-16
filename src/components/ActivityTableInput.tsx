@@ -18,7 +18,7 @@ export const ActivityTableInput: React.FC<ActivityTableInputProps> = ({ activiti
 
   return (
     <div>
-      <h3 className="mb-2 font-bold">Activity Table Input</h3>
+      <h3 className="mb-2 font-bold">Activity Table</h3>
       {activities.map((row, i) => (
         <div key={i} className="flex gap-2 mb-2 items-center">
           <input className="border px-2" placeholder="City" value={row.city} onChange={e => updateField(i, "city", e.target.value)} />

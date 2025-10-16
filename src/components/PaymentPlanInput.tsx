@@ -17,7 +17,7 @@ export const PaymentPlanInput: React.FC<PaymentPlanInputProps> = ({
 
   return (
     <div>
-      <h3 className="mb-2 font-bold">Payment Plan Input</h3>
+      <h3 className="mb-2 font-bold">Payment Plan</h3>
       <div className="flex gap-2 mb-2">
         <input
           className="border px-2"
