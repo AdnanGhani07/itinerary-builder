@@ -118,7 +118,7 @@ export const DayForm: React.FC<DayFormProps> = ({ days, setDays }) => {
             accept="image/*"
             onChange={(e) => handleImageChange(e, i)}
           />
-          <span className='text-gray-500'>Upload Image ${`<`}5MB</span>
+          <span className='text-gray-500'>Upload Image {`<`}5MB</span>
           {/* {day.image && (
             <img
               src={day.image}
