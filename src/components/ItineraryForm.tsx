@@ -18,7 +18,7 @@ import { VisaDetailsInput } from "./VisaDetailsInput";
 import { VisaDetails } from "./VisaDetailsInput";
 
 interface ItineraryFormProps {
-  onSubmit: (data: ItineraryData, tripDetails: TripDetails) => void;
+  onSubmit: (data: ItineraryData, tripDetails: TripDetails, visaDetails: VisaDetails) => void;
 }
 
 const defaultOverview: Overview = {
@@ -60,8 +60,9 @@ function ItineraryForm({ onSubmit }: ItineraryFormProps) {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     onSubmit(
-      { days, hotels, paymentRows, totalAmount, tcs, overview, flightSummary, activities, visaDetails },
-      tripDetails
+      { days, hotels, paymentRows, totalAmount, tcs, overview, flightSummary, activities },
+      tripDetails,
+      visaDetails
     );
   };
 

@@ -63,11 +63,6 @@ export interface ItineraryData {
   paymentRows: PaymentRow[];
   totalAmount: string;
   tcs: string;
-  visaDetails: {
-    visaType: string;
-    validity: string;
-    processingDate: string;
-  };
 }
 
 export interface FlightSummaryItem {
@@ -76,10 +71,4 @@ export interface FlightSummaryItem {
   flightCode: string;
   from: string;
   to: string;
-}
-
-export interface VisaDetails {
-  visaType: string;
-  validity: string;
-  processingDate: string;
 }
