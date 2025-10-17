@@ -103,8 +103,8 @@ function ItineraryForm({ onSubmit }: ItineraryFormProps) {
         setTcs={setTcs}
       />
       <VisaDetailsInput
-        values={visaDetails}
-        setValues={setVisaDetails}
+        value={visaDetails}
+        onChange={setVisaDetails}
       />
 
       <button
