@@ -32,6 +32,7 @@ function App() {
           onSubmit={(data, tripDetails) => {
             setData(data);
             setTripDetails(tripDetails);
+            setVisaDetails(visaDetails);
           }}
         />
       ) : (

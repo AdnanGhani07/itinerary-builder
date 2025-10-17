@@ -15,6 +15,7 @@ import { FlightSummaryForm } from "./FlightSummaryForm";
 import { ActivityTableInput } from "./ActivityTableInput";
 import { PaymentPlanInput } from "./PaymentPlanInput";
 import { VisaDetailsInput } from "./VisaDetailsInput";
+import { VisaDetails } from "./VisaDetailsInput";
 
 interface ItineraryFormProps {
   onSubmit: (data: ItineraryData, tripDetails: TripDetails) => void;
@@ -50,7 +51,7 @@ function ItineraryForm({ onSubmit }: ItineraryFormProps) {
     travellers: "",
   });
 
-  const [visaDetails, setVisaDetails] = useState({
+  const [visaDetails, setVisaDetails] = useState<VisaDetails>({
   visaType: "",
   validity: "",
   processingDate: "",
