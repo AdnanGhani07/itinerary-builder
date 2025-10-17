@@ -1,6 +1,6 @@
 import React from "react";
 
-interface VisaDetailsInputProps {
+export interface VisaDetailsInputProps {
   values: {
     visaType: string;
     validity: string;

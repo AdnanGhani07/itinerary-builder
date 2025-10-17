@@ -9,11 +9,11 @@ import InclusionSummary from "./InclusionSummary";
 import { ActivityTableDisplay } from "./ActivityTableDisplay";
 import { PaymentPlanDisplay } from "./PaymentPlanDisplay";
 import { VisaDetailsDisplay } from "./VisaDetailsDisplay";
-import { VisaDetails } from "../types";
+import { VisaDetailsInputProps } from "./VisaDetailsInput";
 
 interface PreviewProps {
   data: ItineraryData;
-  visaDetails: VisaDetails;
+  visaDetails: VisaDetailsInputProps;
   tripDetails: TripDetails;
 }
 
@@ -223,9 +223,9 @@ const Preview = forwardRef<HTMLDivElement, PreviewProps>(function Preview(
       />
       <br />
       <VisaDetailsDisplay
-        visaType={visaDetails.visaType}
-        validity={visaDetails.validity}
-        processingDate={visaDetails.processingDate}
+        visaType={visaDetails.values.visaType}
+        validity={visaDetails.values.validity}
+        processingDate={visaDetails.values.processingDate}
       />
     </div>
   );
