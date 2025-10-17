@@ -1,15 +1,12 @@
 import React from "react";
+import { VisaDetails } from "./VisaDetailsInput";
 
 interface VisaDetailsDisplayProps {
-  visaType: string;
-  validity: string;
-  processingDate: string;
+  value: VisaDetails;
 }
 
 export const VisaDetailsDisplay: React.FC<VisaDetailsDisplayProps> = ({
-  visaType,
-  validity,
-  processingDate
+  value,
 }) => (
   <div style={{ margin: "30px 0" }}>
     <h2 style={{ fontWeight: "bold", fontSize: 18, marginBottom: 8 }}>
@@ -29,15 +26,15 @@ export const VisaDetailsDisplay: React.FC<VisaDetailsDisplayProps> = ({
     >
       <div style={{ textAlign: "center" }}>
         <span style={{ fontWeight: "bold" }}>Visa Type :</span>
-        <div>{visaType}</div>
+        <div>{value.visaType}</div>
       </div>
       <div style={{ textAlign: "center" }}>
         <span style={{ fontWeight: "bold" }}>Validity:</span>
-        <div>{validity}</div>
+        <div>{value.validity}</div>
       </div>
       <div style={{ textAlign: "center" }}>
         <span style={{ fontWeight: "bold" }}>Processing Date :</span>
-        <div>{processingDate}</div>
+        <div>{value.processingDate}</div>
       </div>
     </div>
   </div>

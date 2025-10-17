@@ -223,9 +223,7 @@ const Preview = forwardRef<HTMLDivElement, PreviewProps>(function Preview(
       />
       <br />
       <VisaDetailsDisplay
-        visaType={visaDetails.visaType}
-        validity={visaDetails.validity}
-        processingDate={visaDetails.processingDate}
+        value={visaDetails}
       />
     </div>
   );
