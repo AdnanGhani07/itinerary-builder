@@ -29,7 +29,7 @@ function App() {
       <h1 className="text-2xl font-bold mb-6 text-center">Itinerary Builder</h1>
       {!data ? (
         <ItineraryForm
-          onSubmit={(data, tripDetails) => {
+          onSubmit={(data, tripDetails, visaDetails) => {
             setData(data);
             setTripDetails(tripDetails);
             setVisaDetails(visaDetails);

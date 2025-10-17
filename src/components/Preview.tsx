@@ -8,8 +8,7 @@ import { ScopeOfService } from "./ScopeOfService";
 import InclusionSummary from "./InclusionSummary";
 import { ActivityTableDisplay } from "./ActivityTableDisplay";
 import { PaymentPlanDisplay } from "./PaymentPlanDisplay";
-import { VisaDetailsDisplay } from "./VisaDetailsDisplay";
-import {VisaDetails} from "./VisaDetailsInput";
+import { VisaDetails } from "./VisaDetailsInput";
 
 interface PreviewProps {
   data: ItineraryData;
@@ -33,6 +32,7 @@ const Preview = forwardRef<HTMLDivElement, PreviewProps>(function Preview(
   } = data;
   const startDate = new Date(tripDetails.departure);
   const endDate = new Date(tripDetails.arrival);
+  console.log(visaDetails);
 
   // Calculate ms difference, then convert to days (accounting for all months/years)
   const msPerDay = 24 * 60 * 60 * 1000;
@@ -222,9 +222,36 @@ const Preview = forwardRef<HTMLDivElement, PreviewProps>(function Preview(
         tcs={tcs}
       />
       <br />
-      <VisaDetailsDisplay
-        value={visaDetails}
-      />
+      <div style={{ margin: "30px 0" }}>
+        <h2 style={{ fontWeight: "bold", fontSize: 18, marginBottom: 8 }}>
+          Visa <span style={{ color: "#7e38b7" }}>Details</span>
+        </h2>
+        <div
+          style={{
+            display: "flex",
+            border: "1.5px solid #b095d6",
+            borderRadius: "18px",
+            padding: "18px 0",
+            justifyContent: "space-around",
+            alignItems: "center",
+            background: "#fff",
+            maxWidth: 600,
+          }}
+        >
+          <div style={{ textAlign: "center" }}>
+            <span style={{ fontWeight: "bold" }}>Visa Type :</span>
+            <div>{visaDetails.visaType}</div>
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <span style={{ fontWeight: "bold" }}>Validity:</span>
+            <div>{visaDetails.validity}</div>
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <span style={{ fontWeight: "bold" }}>Processing Date :</span>
+            <div>{visaDetails.processingDate}</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 });

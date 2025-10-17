@@ -59,6 +59,7 @@ function ItineraryForm({ onSubmit }: ItineraryFormProps) {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(visaDetails)
     onSubmit(
       { days, hotels, paymentRows, totalAmount, tcs, overview, flightSummary, activities },
       tripDetails,
